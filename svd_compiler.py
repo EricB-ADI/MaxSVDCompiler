@@ -5,6 +5,14 @@ import readline
 
 descText = "Compile SVD per peripheral to one file describing entire MCU"
 parser = argparse.ArgumentParser(description=descText, formatter_class=RawTextHelpFormatter)
+parser.add_argument('device',help='MCU Part Number (e.g MAX32665')
+parser.add_argument('series',help='Chip Series (e.g  ME14)')
+parser.add_argument('cpu',help='Main Processor for Device (e.g Cortex-M4 = CM4')
+
+
+
+def discover_svds():
+    pass
 
 svd_output_name = 'svd_me14.svd' 
 
