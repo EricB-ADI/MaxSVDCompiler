@@ -8,11 +8,14 @@ parser = argparse.ArgumentParser(description=descText, formatter_class=RawTextHe
 parser.add_argument('device',help='MCU Part Number (e.g MAX32665')
 parser.add_argument('series',help='Chip Series (e.g  ME14)')
 parser.add_argument('cpu',help='Main Processor for Device (e.g Cortex-M4 = CM4')
+parser.add_argument('-p', '--path', default="",help='Path to search for SVDs in Default is current path')
 
 
+def discoverSvds(basepath):
+    svdfiles = []
 
-def discover_svds():
-    pass
+    return svdfiles
+    
 
 svd_output_name = 'svd_me14.svd' 
 
